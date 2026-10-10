@@ -134,14 +134,25 @@
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
     }
 
-    /* Card Images */
-    .card-image {
+    /* Specialized Image Classes (Option 3) */
+    .img-landscape {
       width: 100%;
-      height: 180px;
+      height: 200px;
       object-fit: cover;
+      object-position: center;
       border-radius: 8px;
       margin-bottom: 1.25rem;
       background-color: #f1f5f9;
+    }
+
+    .img-portrait {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      background-color: #f1f5f9;
+      border-radius: 8px;
+      margin-bottom: 1.25rem;
+      padding: 0.5rem;
     }
 
     .badge {
@@ -257,7 +268,6 @@
 
   <header>
     <div class="hero-container">
-      <!-- Replace with your headshot image path -->
       <img src="assets/images/tom-clark-headshot.jpg" alt="Dr Tom Clark" class="hero-avatar">
       <div class="hero-text">
         <h1>Dr Tom Clark</h1>
@@ -275,11 +285,10 @@
 
     <div class="pillar-grid">
 
-      <!-- Pillar 1: Methods -->
+      <!-- Pillar 1: Methods (Uses img-portrait for textbook cover) -->
       <div class="pillar-card">
         <div>
-          <!-- Replace with Bryman book cover or lecture image -->
-          <img src="assets/images/bryman-cover.jpg" alt="Bryman's Social Research Methods Book Cover" class="card-image">
+          <img src="assets/images/bryman-cover.jpg" alt="Bryman's Social Research Methods Book Cover" class="img-portrait">
           <span class="badge badge-blue">Methodology & Pedagogy</span>
           <h2>Research Methods & Teaching</h2>
           <p>Demystifying social research methods and designing innovative, active-learning curricula for higher education.</p>
@@ -292,11 +301,10 @@
         <a href="#methods" class="card-link">Explore Methods & Pedagogy &rarr;</a>
       </div>
 
-      <!-- Pillar 2: Deviance -->
+      <!-- Pillar 2: Deviance (Uses img-landscape for archival photos/documents) -->
       <div class="pillar-card">
         <div>
-          <!-- Replace with archive document or crime history still -->
-          <img src="assets/images/prison-archives.jpg" alt="Historical Archival Documents" class="card-image">
+          <img src="assets/images/prison-archives.jpg" alt="Historical Archival Documents" class="img-portrait">
           <span class="badge badge-purple">Sociology of Deviance</span>
           <h2>Evil, Notoriety & The Prison Files</h2>
           <p>Investigating the social construction of evil, notorious criminal cases, and historical prison archives.</p>
@@ -309,11 +317,10 @@
         <a href="#deviance" class="card-link">Explore Research on Evil & Deviance &rarr;</a>
       </div>
 
-      <!-- Pillar 3: Belief -->
+      <!-- Pillar 3: Belief (Uses img-landscape for thematic/editorial images) -->
       <div class="pillar-card">
         <div>
-          <!-- Replace with folklore/supernatural image -->
-          <img src="assets/images/supernatural-folklore.jpg" alt="Extraordinary Belief and Folklore" class="card-image">
+          <img src="assets/images/supernatural-folklore.jpg" alt="Extraordinary Belief and Folklore" class="img-portrait">
           <span class="badge badge-amber">Belief & Culture</span>
           <h2>The Paranormal & Extraordinary Belief</h2>
           <p>Exploring how society constructs and manages beliefs in the supernatural, satanic narratives, and folklore.</p>
@@ -326,11 +333,10 @@
         <a href="#belief" class="card-link">Explore Supernatural Research &rarr;</a>
       </div>
 
-      <!-- Pillar 4: Public Engagement -->
+      <!-- Pillar 4: Public Engagement (Uses img-landscape for TV/broadcast stills) -->
       <div class="pillar-card">
         <div>
-          <!-- Replace with TV still or broadcast studio image -->
-          <img src="assets/images/media-broadcast.jpg" alt="Dr Tom Clark on TV Broadcast" class="card-image">
+          <img src="assets/images/media-broadcast.jpg" alt="Dr Tom Clark on TV Broadcast" class="img-landscape">
           <span class="badge badge-emerald">Public Engagement</span>
           <h2>Media, Broadcast & Commentary</h2>
           <p>Translating complex sociological insights for national press, radio, and television documentaries.</p>
