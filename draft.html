@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr Tom Clark | Sociologist, Author & Public Communicator</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #475569;
+      --accent-blue: #0284c7;
+      --accent-purple: #7c3aed;
+      --accent-amber: #d97706;
+      --accent-emerald: #059669;
+      --border: #e2e8f0;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text-main);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header & Hero */
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 4rem 1.5rem 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .hero-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-tagline {
+      font-size: 1.2rem;
+      color: #94a3b8;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-bio {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+
+    /* Container & Layout */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 2.5rem;
+      color: var(--text-main);
+    }
+
+    /* 4-Pillar Grid Layout */
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .pillar-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pillar-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+
+    .badge-blue { background: #e0f2fe; color: #0369a1; }
+    .badge-purple { background: #f3e8ff; color: #6b21a8; }
+    .badge-amber { background: #fef3c7; color: #92400e; }
+    .badge-emerald { background: #d1fae5; color: #065f46; }
+
+    .pillar-card h2 {
+      font-size: 1.35rem;
+      margin: 0 0 0.75rem 0;
+      color: var(--text-main);
+    }
+
+    .pillar-card p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .pillar-highlights {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem 0;
+      border-top: 1px dashed var(--border);
+      padding-top: 1rem;
+    }
+
+    .pillar-highlights li {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .pillar-highlights li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+    }
+
+    .card-link {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .card-link:hover { text-decoration: underline; }
+
+    /* Media Highlight Strip */
+    .media-strip {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .media-quote {
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-main);
+      max-width: 750px;
+      margin: 0 auto 1rem auto;
+    }
+
+    .media-source {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Contact Box */
+    .contact-card {
+      background: #0f172a;
+      color: white;
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .contact-card h2 { margin-top: 0; }
+    .contact-card a { color: #38bdf8; text-decoration: none; font-weight: 600; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hero-container">
+      <h1>Dr Tom Clark</h1>
+      <div class="hero-tagline">Sociologist • Author • Public Communicator</div>
+      <div class="hero-bio">
+        I am a UK-based sociologist specializing in research methods, deviance, and extraordinary belief. My work focuses on making complex sociological ideas accessible and engaging for students, researchers, media audiences, and the general public.
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <h2 class="section-title">Areas of Focus & Expertise</h2>
+
+    <div class="pillar-grid">
+
+      <!-- Pillar 1 -->
+      <div class="pillar-card">
+        <div>
+          <span class="badge badge-blue">Methodology & Pedagogy</span>
+          <h2>Research Methods & Teaching</h2>
+          <p>Demystifying social research methods and designing innovative, active-learning curricula for higher education.</p>
+          <ul class="pillar-highlights">
+            <li>Co-Author of <em>Bryman's Social Research Methods</em> (Oxford University Press)</li>
+            <li>Senior Fellow of the Higher Education Academy (SFHEA)</li>
+            <li>Developer of integrated methods spines and digital education initiatives</li>
+          </ul>
+        </div>
+        <a href="#methods" class="card-link">Explore Methods & Pedagogy &rarr;</a>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="pillar-card">
+        <div>
+          <span class="badge badge-purple">Sociology of Deviance</span>
+          <h2>Evil, Notoriety & The Prison Files</h2>
+          <p>Investigating the social construction of evil, notorious criminal cases, and historical prison archives.</p>
+          <ul class="pillar-highlights">
+            <li>Archival analysis of high-profile cases (Myra Hindley, Fred West, Harold Shipman)</li>
+            <li>Author of upcoming monograph on <em>The Sociology of Evil</em></li>
+            <li>Research on moral panics, folk devils, and social harm</li>
+          </ul>
+        </div>
+        <a href="#deviance" class="card-link">Explore Research on Evil & Deviance &rarr;</a>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="pillar-card">
+        <div>
+          <span class="badge badge-amber">Belief & Culture</span>
+          <h2>The Paranormal & Extraordinary Belief</h2>
+          <p>Exploring how society constructs and manages beliefs in the supernatural, satanic narratives, and folklore.</p>
+          <ul class="pillar-highlights">
+            <li>Keynote speaker on extraordinary belief and satanic narratives</li>
+            <li>Public commentary on cryptozoology, Bigfoot, and modern folklore</li>
+            <li>Sociological analysis of deviance management in non-ordinary belief systems</li>
+          </ul>
+        </div>
+        <a href="#belief" class="card-link">Explore Supernatural Research &rarr;</a>
+      </div>
+
+      <!-- Pillar 4 -->
+      <div class="pillar-card">
+        <div>
+          <span class="badge badge-emerald">Public Engagement</span>
+          <h2>Media, Broadcast & Commentary</h2>
+          <p>Translating complex sociological insights for national press, radio, and television documentaries.</p>
+          <ul class="pillar-highlights">
+            <li>On-screen expert and consultant for TV, radio, and ITN/Audible documentaries</li>
+            <li>Over 40 media features in <em>The Times</em>, <em>Daily Telegraph</em>, and <em>Sky News</em></li>
+            <li>Public-facing essays for <em>WONKHE</em>, <em>The Conversation</em>, and policy blogs</li>
+          </ul>
+        </div>
+        <a href="#media" class="card-link">View Media & Public Features &rarr;</a>
+      </div>
+
+    </div>
+
+    <!-- Featured Media Banner -->
+    <div class="media-strip">
+      <div class="media-quote">
+        "Translating archival sociological research into clear, compelling narratives for national media, documentary teams, and public commentary."
+      </div>
+      <div class="media-source">As featured on BBC Radio, Sky News, ITN Productions, and The Times</div>
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="contact-card">
+      <h2>Media Inquiries & Collaborations</h2>
+      <p>I am available for media commentary, podcast guesting, guest lectures, and educational consultancy.</p>
+      <p>Get in touch: <a href="mailto:tom@hellotomclark.com">tom@hellotomclark.com</a></p>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2026 Dr Tom Clark • hellotomclark.com
+  </footer>
+
+</body>
+</html>
