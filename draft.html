@@ -134,6 +134,31 @@
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
     }
 
+    /* 3-Book Showcase Container (Pillar 1) */
+    .book-showcase {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      align-items: flex-end;
+      background-color: #f1f5f9;
+      border-radius: 8px;
+      padding: 0.75rem 0.5rem;
+      margin-bottom: 1.25rem;
+      height: 200px;
+    }
+
+    .book-showcase img {
+      height: 100%;
+      max-width: 31%;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+      transition: transform 0.2s ease;
+    }
+
+    .book-showcase img:hover {
+      transform: translateY(-4px) scale(1.03);
+    }
+
     /* Specialized Image Classes (Option 3) */
     .img-landscape {
       width: 100%;
@@ -147,7 +172,7 @@
 
     .img-portrait {
       width: 100%;
-      height: 220px;
+      height: 200px;
       object-fit: contain;
       background-color: #f1f5f9;
       border-radius: 8px;
@@ -285,15 +310,19 @@
 
     <div class="pillar-grid">
 
-      <!-- Pillar 1: Methods (Uses img-portrait for textbook cover) -->
+      <!-- Pillar 1: Methods (3-Book Showcase) -->
       <div class="pillar-card">
         <div>
-          <img src="assets/images/bryman-cover.jpg" alt="Bryman's Social Research Methods Book Cover" class="img-portrait">
+          <div class="book-showcase">
+            <img src="assets/images/bryman-6th.jpg" alt="Bryman's Social Research Methods 6th Edition">
+            <img src="assets/images/bryman-5th.jpg" alt="Bryman's Social Research Methods 5th Edition">
+            <img src="assets/images/dissertation-guide.jpg" alt="How To Do Your Dissertation or Social Science Research Project">
+          </div>
           <span class="badge badge-blue">Methodology & Pedagogy</span>
           <h2>Research Methods & Teaching</h2>
           <p>Demystifying social research methods and designing innovative, active-learning curricula for higher education.</p>
           <ul class="pillar-highlights">
-            <li>Co-Author of <em>Bryman's Social Research Methods</em> (Oxford University Press)</li>
+            <li>Lead author on major Oxford University Press research methods textbooks</li>
             <li>Senior Fellow of the Higher Education Academy (SFHEA)</li>
             <li>Developer of integrated methods spines and digital education initiatives</li>
           </ul>
@@ -301,7 +330,7 @@
         <a href="#methods" class="card-link">Explore Methods & Pedagogy &rarr;</a>
       </div>
 
-      <!-- Pillar 2: Deviance (Uses img-landscape for archival photos/documents) -->
+      <!-- Pillar 2: Deviance (Uses img-portrait/img-landscape for archival photos/documents) -->
       <div class="pillar-card">
         <div>
           <img src="assets/images/prison-archives.jpg" alt="Historical Archival Documents" class="img-portrait">
@@ -317,7 +346,7 @@
         <a href="#deviance" class="card-link">Explore Research on Evil & Deviance &rarr;</a>
       </div>
 
-      <!-- Pillar 3: Belief (Uses img-landscape for thematic/editorial images) -->
+      <!-- Pillar 3: Belief (Uses img-portrait/img-landscape for thematic/editorial images) -->
       <div class="pillar-card">
         <div>
           <img src="assets/images/supernatural-folklore.jpg" alt="Extraordinary Belief and Folklore" class="img-portrait">
